@@ -1,31 +1,84 @@
 {
-    "rules": {
-        "indent": [
-            2,
-            4
-        ],
-        "quotes": [
-            2,
-            "single"
-        ],
-        "linebreak-style": [
-            2,
-            "unix"
-        ],
-        "semi": [
-            2,
-            "always"
-        ]
-    },
-    "env": {
-        "es6": true,
-        "node": true,
-        "browser": true
-    },
-    "ecmaFeatures": {
-        "jsx": true
-    },
-    "plugins": [
-        "react"
-    ]
-}
+  "ecmaFeatures": {
+    "globalReturn": false,
+    "jsx": true,
+    "modules": true,
+    "spread": true
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "mocha": true,
+    "node": true,
+    "phantomjs": true,
+    "worker": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "accessor-pairs": 2,
+    "block-scoped-var": [ 2 ],
+    "complexity": [ 2, 10 ],
+    "default-case": 2,
+    "dot-location": [ 2, "object" ],
+    "guard-for-in": 2,
+    "no-div-regex": 2,
+    "no-else-return": 2,
+    "no-eq-null": 2,
+    "no-floating-decimal": 2,
+    "no-param-reassign": 2,
+    "no-process-env": 2,
+    "no-self-compare": 2,
+    "no-throw-literal": 2,
+    "no-void": 2,
+    "no-warning-comments": [ 2, { "terms": [ "todo", "fixme", "any other term" ], "location": "anywhere" }],
+    "wrap-iife": [ 2, "inside" ],
+    "vars-on-top": 2,
+    "radix": 2,
+    "strict": [ 2, "global" ],
+    "no-undefined": 2,
+    "no-unused-vars": [ 2, { "vars": "all", "args": "all" }],
+    "handle-callback-err": [ 2, "^(err|error)$" ],
+    "no-sync": 2,
+    "brace-style": [ 2, "1tbs", { "allowSingleLine": false }],
+    "comma-style": 2,
+    "consistent-this": [ 2, "self" ],
+    "func-names": 2,
+    "func-style": 2,
+    "indent": [ 2, 2, { "indentSwitchCase": true }],
+    "lines-around-comment": [ 2, { "beforeBlockComment": true }],
+    "linebreak-style": 2,
+    "max-nested-callbacks": [ 2, 3 ],
+    "newline-after-var": 2,
+    "no-inline-comments": 2,
+    "no-lonely-if": 2,
+    "no-multiple-empty-lines": [ 2, { "max": 2 }],
+    "no-nested-ternary": 2,
+    "no-unneeded-ternary": 2,
+    "one-var": [ 2, "always" ],
+    "operator-assignment": 2,
+    "operator-linebreak": 2,
+    "padded-blocks": [ 2, "never" ],
+    "quote-props": 2,
+    "quotes": [ 2, "single" ],
+    "sort-vars": [ 2, { "ignoreCase": false }],
+    "space-after-keywords": 2,
+    "space-before-blocks": [ 2, "always" ],
+    "space-before-function-paren": [ 2, "never" ],
+    "space-in-brackets": [ 2, "always", {
+      "singleValue": true,
+      "objectsInArrays": false,
+      "arraysInArrays": false,
+      "arraysInObjects": false,
+      "objectsInObjects": false,
+      "propertyName": true
+    }],
+    "space-in-parens": [ 2, "always", { "exceptions": [ "{}", "[]", "()", "empty" ]}],
+    "spaced-line-comment": 2,
+    "generator-star-spacing": [ 2, "before" ],
+    "no-var": 2,
+    "object-shorthand": [ 2, "always" ]
+  }
+};
+
