@@ -43,6 +43,7 @@
     "no-sync": 2,
     "brace-style": [ 2, "1tbs", { "allowSingleLine": false }],
     "comma-style": 2,
+    "computed-property-spacing": [ 2, "always" ],
     "consistent-this": [ 2, "self" ],
     "func-names": 2,
     "func-style": 2,
