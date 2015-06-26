@@ -16,7 +16,9 @@
   "plugins": [
     "react"
   ],
-  "rules": {
+   "rules": {
+    "valid-jsdoc": 2,
+    "no-unexpected-multiline": 2,
     "accessor-pairs": 2,
     "block-scoped-var": [ 2 ],
     "complexity": [ 2, 10 ],
@@ -41,6 +43,11 @@
     "no-unused-vars": [ 2, { "vars": "all", "args": "all" }],
     "handle-callback-err": [ 2, "^(err|error)$" ],
     "no-sync": 2,
+    "array-bracket-spacing": [ 2, "always", {
+      "singleValue": true,
+      "objectsInArrays": false,
+      "arraysInArrays": false
+    }],
     "brace-style": [ 2, "1tbs", { "allowSingleLine": false }],
     "comma-style": 2,
     "computed-property-spacing": [ 2, "always" ],
@@ -77,10 +84,12 @@
     }],
     "space-in-parens": [ 2, "always", { "exceptions": [ "{}", "[]", "()", "empty" ]}],
     "spaced-comment": 2,
+    "constructor-super": 2,
     "generator-star-spacing": [ 2, "before" ],
+    "no-this-before-super": 2,
     "no-var": 2,
     "object-shorthand": [ 2, "always" ],
     "prefer-const": 2
   }
-};
+}
 
