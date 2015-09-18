@@ -243,7 +243,8 @@
     "jsx-quotes": [ 2, "prefer-double" ],
     "key-spacing": [ 2, {
       "beforeColon": false,
-      "afterColon": true
+      "afterColon": true,
+      "mode": "strict"
     }],
     "lines-around-comment": [ 2, {
       "beforeBlockComment": true,
@@ -287,7 +288,10 @@
     "sort-vars": [ 2, { "ignoreCase": false }],
     "space-after-keywords": [ 2, "always" ],
     "space-before-keywords": [ 2, "always" ],
-    "space-before-blocks": [ 2, "always" ],
+    "space-before-blocks": [ 2, {
+      "functions": "always",
+      "keywords": "always"
+    }],
     "space-before-function-paren": [ 2, "never" ],
     "space-in-parens": [ 2, "always", {
       "exceptions": [ "{}", "[]", "()", "empty" ]
