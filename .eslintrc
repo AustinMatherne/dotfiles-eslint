@@ -67,6 +67,7 @@
     "arrow-parens": 0,
     "babel/arrow-parens": [ 2, "always" ],
     "react/display-name": 2,
+    "react/forbid-prop-types": 2,
     "react/jsx-boolean-value": [ 2, "always" ],
     "react/jsx-closing-bracket-location": [ 2, {
       "nonEmpty": "tag-aligned",
@@ -85,6 +86,7 @@
     "react/no-danger": 2,
     "react/no-did-mount-set-state": 2,
     "react/no-did-update-set-state": 2,
+    "react/no-direct-mutation-state": 2,
     "react/no-multi-comp": 2,
     "react/no-set-state": 2,
     "react/no-unknown-property": 2,
