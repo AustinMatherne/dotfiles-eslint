@@ -46,6 +46,7 @@
     "nashorn": false,
     "serviceworker": true,
     "embertest": false,
+    "webextensions": true,
     "es6": true
   },
   "parser": "babel-eslint",
@@ -80,8 +81,14 @@
     "react/jsx-no-duplicate-props": [ 2, { "ignoreCase": false }],
     "react/jsx-no-literals": 2,
     "react/jsx-no-undef": 2,
-    "react/jsx-sort-prop-types": [ 2, { "ignoreCase": false }],
-    "react/jsx-sort-props": [ 2, { "ignoreCase": false }],
+    "react/jsx-sort-prop-types": [ 2, {
+      "callbacksLast": true,
+      "ignoreCase": false
+    }],
+    "react/jsx-sort-props": [ 2, {
+      "callbacksLast": true,
+      "ignoreCase": false
+    }],
     "react/jsx-uses-react": 2,
     "react/jsx-uses-vars": 2,
     "react/no-danger": 2,
@@ -101,6 +108,7 @@
       "assignment": true,
       "return": true
     }],
+    "prefer-es6-class": 2,
     "comma-dangle": [ 2, "always-multiline" ],
     "no-cond-assign": [ 2, "except-parens" ],
     "no-console": 2,
@@ -151,6 +159,7 @@
     "no-div-regex": 2,
     "no-else-return": 2,
     "no-empty-label": 2,
+    "no-empty-pattern": 2,
     "no-eq-null": 2,
     "no-eval": 2,
     "no-extend-native": 2,
@@ -168,6 +177,11 @@
     "no-labels": 2,
     "no-lone-blocks": 2,
     "no-loop-func": 2,
+    "no-magic-numbers": [ 2, {
+      "ignore": [0, 1, 2],
+      "enforceConst": true,
+      "detectObjects": true
+    }],
     "no-multi-spaces": [ 2, { exceptions: { "Property": false }}],
     "no-multi-str": 2,
     "no-native-reassign": 2,
@@ -236,7 +250,7 @@
     "consistent-this": [ 2, "self" ],
     "eol-last": 2,
     "func-names": 2,
-    "func-style": [ 2, "declaration" ],
+    "func-style": [ 2, "declaration", { "allowArrowFunctions": true }],
     "id-length": [ 2, {
       "min": 2,
       "properties": "always"
@@ -255,7 +269,11 @@
       "beforeLineComment": true,
       "afterLineComment": false,
       "allowBlockStart": true,
-      "allowBlockEnd": false
+      "allowBlockEnd": true,
+      "allowObjectStart" : true,
+      "allowObjectEnd" : true,
+      "allowArrayStart" : true,
+      "allowArrayEnd" : true
     }],
     "linebreak-style": [ 2, "unix" ],
     "max-nested-callbacks": [ 2, 2 ],
