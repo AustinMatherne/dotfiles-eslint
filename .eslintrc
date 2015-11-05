@@ -75,8 +75,8 @@
     "react/forbid-prop-types": 2,
     "react/jsx-boolean-value": [2, "always"],
     "react/jsx-closing-bracket-location": [2, {
-      "nonEmpty": "tag-aligned",
-      "selfClosing": "tag-aligned"
+      "nonEmpty": "line-aligned",
+      "selfClosing": "line-aligned"
     }],
     "react/jsx-curly-spacing": [2, "always", {
       "allowMultiline": true
@@ -85,6 +85,7 @@
     "react/jsx-max-props-per-line": [2, {
       "maximum": 1
     }],
+    "react/jsx-no-bind": 2,
     "react/jsx-no-duplicate-props": [2, {
       "ignoreCase": false
     }],
