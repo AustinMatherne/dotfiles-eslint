@@ -1,4 +1,4 @@
-{
+module.exports = {
   "ecmaFeatures": {
     "arrowFunctions": true,
     "binaryLiterals": true,
