@@ -158,7 +158,7 @@ module.exports = {
     "valid-typeof": 2,
     "no-unexpected-multiline": 2,
     "accessor-pairs": [2, {
-      getWithoutSet: true
+      "getWithoutSet": true
     }],
     "block-scoped-var": 2,
     "complexity": [2, 10],
@@ -201,7 +201,7 @@ module.exports = {
       "detectObjects": true
     }],
     "no-multi-spaces": [2, {
-      exceptions: {
+      "exceptions": {
         "Property": false
       }
     }],
