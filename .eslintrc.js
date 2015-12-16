@@ -209,8 +209,8 @@ module.exports = {
     'no-lone-blocks': ENABLE,
     'no-loop-func': ENABLE,
     'no-magic-numbers': [ENABLE, {
-      ignore: [],
-      enforceConst: true,
+      ignore: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      enforceConst: false,
       detectObjects: false,
     }],
     'no-multi-spaces': [ENABLE, {
