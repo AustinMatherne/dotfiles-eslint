@@ -77,8 +77,8 @@ module.exports = {
     }],
     'object-curly-spacing': DISABLE,
     'babel/object-curly-spacing': [ENABLE, NEVER, {
-      objectsInObjects: true,
-      arraysInObjects: true,
+      objectsInObjects: false,
+      arraysInObjects: false,
     }],
     'object-shorthand': DISABLE,
     'babel/object-shorthand': [ENABLE, ALWAYS],
