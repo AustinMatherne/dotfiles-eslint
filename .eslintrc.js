@@ -272,9 +272,9 @@ module.exports = {
     'no-undefined': ENABLE,
     'no-unused-vars': [ENABLE, {
       vars: 'all',
-      args: 'all',
+      args: 'after-used',
     }],
-    'no-use-before-define': ENABLE,
+    'no-use-before-define': [ENABLE, 'nofunc'],
     'callback-return': [ENABLE, ['callback', 'cb', 'next']],
     'global-require': ENABLE,
     'handle-callback-err': [ENABLE, '^(err|error)$'],
@@ -313,6 +313,7 @@ module.exports = {
     'id-length': [ENABLE, {
       min: ENABLE,
       properties: ALWAYS,
+      exceptions: ['_'],
     }],
     'id-match': DISABLE,
     'indent': [ENABLE, INDENT_LENGTH, {
@@ -378,7 +379,7 @@ module.exports = {
     'no-unneeded-ternary': [ENABLE, {
       defaultAssignment: false,
     }],
-    'one-var': [ENABLE, ALWAYS],
+    'one-var': [ENABLE, NEVER],
     'operator-assignment': [ENABLE, ALWAYS],
     'operator-linebreak': [ENABLE, 'after'],
     'padded-blocks': [ENABLE, NEVER],
@@ -413,7 +414,7 @@ module.exports = {
     }],
     'spaced-comment': [ENABLE, ALWAYS],
     'wrap-regex': ENABLE,
-    'arrow-body-style': [ENABLE, 'as-needed'],
+    'arrow-body-style': [ENABLE, ALWAYS],
     'arrow-spacing': [ENABLE, {
       before: true,
       after: true,
