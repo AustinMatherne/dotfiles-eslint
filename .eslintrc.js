@@ -104,6 +104,7 @@ module.exports = {
     'react/jsx-no-duplicate-props': [ENABLE, {
       ignoreCase: false,
     }],
+    'react/jsx-no-is-mounted': ENABLE,
     'react/jsx-no-literals': ENABLE,
     'react/jsx-pascal-case': ENABLE,
     'react/jsx-no-undef': ENABLE,
@@ -118,6 +119,7 @@ module.exports = {
     'react/jsx-uses-react': ENABLE,
     'react/jsx-uses-vars': ENABLE,
     'react/no-danger': ENABLE,
+    'react/no-deprecated': ENABLE,
     'react/no-did-mount-set-state': ENABLE,
     'react/no-did-update-set-state': ENABLE,
     'react/no-direct-mutation-state': ENABLE,
