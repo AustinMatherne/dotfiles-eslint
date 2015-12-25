@@ -95,6 +95,10 @@ module.exports = {
     'react/jsx-curly-spacing': [ENABLE, ALWAYS, {
       allowMultiline: true,
     }],
+    'react/jsx-handler-names': [ENABLE, {
+      'eventHandlerPrefix': 'handle',
+      'eventHandlerPropPrefix': 'on',
+    }]
     'react/jsx-indent-props': [ENABLE, INDENT_LENGTH_JSX_PROPS],
     'react/jsx-key': ENABLE,
     'react/jsx-max-props-per-line': [ENABLE, {
@@ -104,10 +108,9 @@ module.exports = {
     'react/jsx-no-duplicate-props': [ENABLE, {
       ignoreCase: false,
     }],
-    'react/jsx-no-is-mounted': ENABLE,
     'react/jsx-no-literals': ENABLE,
-    'react/jsx-pascal-case': ENABLE,
     'react/jsx-no-undef': ENABLE,
+    'react/jsx-pascal-case': ENABLE,
     'react/jsx-sort-prop-types': [ENABLE, {
       callbacksLast: true,
       ignoreCase: false,
@@ -123,10 +126,12 @@ module.exports = {
     'react/no-did-mount-set-state': ENABLE,
     'react/no-did-update-set-state': ENABLE,
     'react/no-direct-mutation-state': ENABLE,
+    'react/no-is-mounted': ENABLE,
     'react/no-multi-comp': [ENABLE, {ignoreStateless: false}],
     'react/no-set-state': ENABLE,
+    'react/no-string-refs': ENABLE,
     'react/no-unknown-property': ENABLE,
-    'react/prefer-es6-class': ENABLE,
+    'react/prefer-es6-class': [ENABLE, ALWAYS],
     'react/prop-types': ENABLE,
     'react/react-in-jsx-scope': ENABLE,
     'react/require-extension': ENABLE,
