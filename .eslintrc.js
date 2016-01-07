@@ -1,15 +1,15 @@
-const ALWAYS = 'always',
-      DISABLE = 0,
-      ENABLE = 2,
-      INDENT_LENGTH = 2,
-      INDENT_LENGTH_JSX = 4,
-      MAX_BLOCK_DEPTH = 4,
-      MAX_COMPLEXITY = 10,
-      MAX_FUNCTION_PARAMETERS = 3,
-      MAX_LINE_LENGTH = 80,
-      MAX_NESTED_CALLBACKS = 2,
-      MAX_STATEMENTS = 10,
-      NEVER = 'never'
+const ALWAYS = 'always'
+const DISABLE = 0
+const ENABLE = 2
+const INDENT_LENGTH = 2
+const INDENT_LENGTH_JSX = 4
+const MAX_BLOCK_DEPTH = 4
+const MAX_COMPLEXITY = 10
+const MAX_FUNCTION_PARAMETERS = 3
+const MAX_LINE_LENGTH = 80
+const MAX_NESTED_CALLBACKS = 2
+const MAX_STATEMENTS = 10
+const NEVER = 'never'
 
 module.exports = {
   ecmaFeatures: {
