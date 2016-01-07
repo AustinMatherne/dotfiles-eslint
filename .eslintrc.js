@@ -96,8 +96,8 @@ module.exports = {
       allowMultiline: true,
     }],
     'react/jsx-handler-names': [ENABLE, {
-      'eventHandlerPrefix': 'handle',
-      'eventHandlerPropPrefix': 'on',
+      eventHandlerPrefix: 'handle',
+      eentHandlerPropPrefix: 'on',
     }],
     'react/jsx-indent-props': [ENABLE, INDENT_LENGTH_JSX],
     'react/jsx-indent': [ENABLE, INDENT_LENGTH_JSX],
@@ -441,9 +441,9 @@ module.exports = {
     'prefer-template': ENABLE,
     'require-yield': ENABLE,
   },
-  'settings': {
-    'react': {
-      'pragma': 'React',
+  settings: {
+    react: {
+      pragma: 'React',
     },
   },
 }
