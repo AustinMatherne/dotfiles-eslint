@@ -2,7 +2,7 @@ const ALWAYS = 'always',
       DISABLE = 0,
       ENABLE = 2,
       INDENT_LENGTH = 2,
-      INDENT_LENGTH_JSX_PROPS = 4,
+      INDENT_LENGTH_JSX = 4,
       MAX_BLOCK_DEPTH = 4,
       MAX_COMPLEXITY = 10,
       MAX_FUNCTION_PARAMETERS = 3,
@@ -98,8 +98,9 @@ module.exports = {
     'react/jsx-handler-names': [ENABLE, {
       'eventHandlerPrefix': 'handle',
       'eventHandlerPropPrefix': 'on',
-    }]
-    'react/jsx-indent-props': [ENABLE, INDENT_LENGTH_JSX_PROPS],
+    }],
+    'react/jsx-indent-props': [ENABLE, INDENT_LENGTH_JSX],
+    'react/jsx-indent': [ENABLE, INDENT_LENGTH_JSX],
     'react/jsx-key': ENABLE,
     'react/jsx-max-props-per-line': [ENABLE, {
       maximum: 1,
@@ -439,6 +440,11 @@ module.exports = {
     'prefer-spread': ENABLE,
     'prefer-template': ENABLE,
     'require-yield': ENABLE,
+  },
+  'settings': {
+    'react': {
+      'pragma': 'React',
+    },
   },
 }
 
