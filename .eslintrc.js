@@ -95,6 +95,7 @@ module.exports = {
     'react/jsx-curly-spacing': [ENABLE, ALWAYS, {
       allowMultiline: true,
     }],
+    'react/jsx-equals-spacing': [ENABLE, NEVER],
     'react/jsx-handler-names': [ENABLE, {
       eventHandlerPrefix: 'handle',
       eentHandlerPropPrefix: 'on',
@@ -105,7 +106,11 @@ module.exports = {
     'react/jsx-max-props-per-line': [ENABLE, {
       maximum: 1,
     }],
-    'react/jsx-no-bind': ENABLE,
+    'react/jsx-no-bind': [ENABLE, {
+      ignoreRefs: false,
+      allowArrowFunctions: false,
+      allowBind: false,
+    }],
     'react/jsx-no-duplicate-props': [ENABLE, {
       ignoreCase: false,
     }],
@@ -113,12 +118,14 @@ module.exports = {
     'react/jsx-no-undef': ENABLE,
     'react/jsx-pascal-case': ENABLE,
     'react/jsx-sort-prop-types': [ENABLE, {
-      callbacksLast: true,
       ignoreCase: false,
+      callbacksLast: true,
+      requiredFirst: true,
     }],
     'react/jsx-sort-props': [ENABLE, {
-      callbacksLast: true,
       ignoreCase: false,
+      callbacksLast: true,
+      shorthandFirst: true,
     }],
     'react/jsx-uses-react': ENABLE,
     'react/jsx-uses-vars': ENABLE,
