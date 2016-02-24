@@ -178,7 +178,7 @@ module.exports = {
     'use-isnan': ENABLE,
     'valid-jsdoc': [ENABLE, {
       prefer: {
-        return: 'return',
+        return: 'returns',
       },
       requireReturn: true,
       requireParamDescription: true,
