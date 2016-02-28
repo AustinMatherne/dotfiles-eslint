@@ -204,7 +204,6 @@ module.exports = {
     'no-case-declarations': ENABLE,
     'no-div-regex': ENABLE,
     'no-else-return': ENABLE,
-    'no-empty-label': ENABLE,
     'no-empty-pattern': ENABLE,
     'no-eq-null': ENABLE,
     'no-eval': ENABLE,
@@ -220,7 +219,10 @@ module.exports = {
     'no-implied-eval': ENABLE,
     'no-invalid-this': ENABLE,
     'no-iterator': ENABLE,
-    'no-labels': ENABLE,
+    'no-labels': [ENABLE, {
+      'allowLoop': false,
+      'allowSwitch': false,
+    }],
     'no-lone-blocks': ENABLE,
     'no-loop-func': ENABLE,
     'no-magic-numbers': [ENABLE, {
@@ -345,6 +347,11 @@ module.exports = {
       afterColon: true,
       mode: 'strict',
     }],
+    'keyword-spacing': [ENABLE, {
+      'before': true,
+      'after': true,
+      'overrides': {},
+    }]
     'linebreak-style': [ENABLE, 'unix'],
     'lines-around-comment': [ENABLE, {
       beforeBlockComment: true,
@@ -409,20 +416,17 @@ module.exports = {
     'sort-vars': [ENABLE, {
       ignoreCase: false,
     }],
-    'space-after-keywords': [ENABLE, ALWAYS],
     'space-before-blocks': [ENABLE, {
       functions: ALWAYS,
       keywords: ALWAYS,
     }],
     'space-before-function-paren': [ENABLE, NEVER],
-    'space-before-keywords': [ENABLE, ALWAYS],
     'space-in-parens': [ENABLE, NEVER, {
       exceptions: [],
     }],
     'space-infix-ops': [ENABLE, {
       int32Hint: false,
     }],
-    'space-return-throw-case': ENABLE,
     'space-unary-ops': [ENABLE, {
       words: true,
       nonwords: false,
@@ -435,8 +439,8 @@ module.exports = {
       after: true,
     }],
     'constructor-super': ENABLE,
-    'no-arrow-condition': ENABLE,
     'no-class-assign': ENABLE,
+    'no-confusing-arrow': ENABLE,
     'no-const-assign': ENABLE,
     'no-dupe-class-members': ENABLE,
     'no-this-before-super': ENABLE,
