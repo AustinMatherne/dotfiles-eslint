@@ -12,32 +12,6 @@ const MAX_STATEMENTS = 10
 const NEVER = 'never'
 
 module.exports = {
-  ecmaFeatures: {
-    arrowFunctions: true,
-    binaryLiterals: true,
-    blockBindings: true,
-    classes: true,
-    defaultParams: true,
-    destructuring: true,
-    forOf: true,
-    generators: true,
-    modules: true,
-    objectLiteralComputedProperties: true,
-    objectLiteralDuplicateProperties: true,
-    objectLiteralShorthandMethods: true,
-    objectLiteralShorthandProperties: true,
-    octalLiterals: true,
-    regexUFlag: true,
-    regexYFlag: true,
-    restParams: true,
-    spread: true,
-    superInFunctions: true,
-    templateStrings: true,
-    unicodeCodePointEscapes: true,
-    globalReturn: false,
-    jsx: true,
-    experimentalObjectRestSpread: true,
-  },
   env: {
     browser: true,
     node: true,
@@ -63,6 +37,16 @@ module.exports = {
     es6: true,
   },
   parser: 'babel-eslint',
+  parserOptions: {
+    ecmaVersion: 6,
+    sourceType: 'module',
+    ecmaFeatures: {
+      globalReturn: false,
+      impliedStrict: true,
+      jsx: true,
+      experimentalObjectRestSpread: ,
+    },
+  },
   plugins: [
     'babel',
     'react',
