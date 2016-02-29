@@ -212,6 +212,7 @@ module.exports = {
     'no-loop-func': ENABLE,
     'no-magic-numbers': [ENABLE, {
       ignore: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      ignoreArrayIndexes: false,
       enforceConst: false,
       detectObjects: false,
     }],
