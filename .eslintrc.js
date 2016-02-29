@@ -11,31 +11,31 @@ const MAX_STATEMENTS = 10
 
 module.exports = {
   env: {
-    browser: true,
-    node: true,
-    commonjs: true,
-    shared-node-browser: true,
-    es6: true,
-    worker: true,
-    amd: false,
-    mocha: true,
-    jasmine: false,
-    jest: false,
-    phantomjs: true,
-    protractor: false,
-    qunit: false,
-    jquery: false,
-    prototypejs: false,
-    shelljs: false,
-    meteor: false,
-    mongo: false,
-    applescript: false,
-    nashorn: false,
-    serviceworker: true,
-    atomtest: false,
-    embertest: false,
-    webextensions: true,
-    greasemonkey: true,
+    'browser': true,
+    'node': true,
+    'commonjs': true,
+    'shared-node-browser': true,
+    'es6': true,
+    'worker': true,
+    'amd': false,
+    'mocha': true,
+    'jasmine': false,
+    'jest': false,
+    'phantomjs': true,
+    'protractor': false,
+    'qunit': false,
+    'jquery': false,
+    'prototypejs': false,
+    'shelljs': false,
+    'meteor': false,
+    'mongo': false,
+    'applescript': false,
+    'nashorn': false,
+    'serviceworker': true,
+    'atomtest': false,
+    'embertest': false,
+    'webextensions': true,
+    'greasemonkey': true,
   },
   extends: ['eslint:recommended', 'plugin:react/recommended'],
   parser: 'babel-eslint',
@@ -46,12 +46,12 @@ module.exports = {
       globalReturn: false,
       impliedStrict: true,
       jsx: true,
-      experimentalObjectRestSpread: ,
+      experimentalObjectRestSpread: true,
     },
   },
   plugins: [
     'babel',
-    'flow-vars'
+    'flow-vars',
     'react',
   ],
   rules: {
@@ -115,7 +115,7 @@ module.exports = {
     'react/jsx-equals-spacing': [ENABLE, 'never'],
     'react/jsx-handler-names': [ENABLE, {
       eventHandlerPrefix: 'handle',
-      eentHandlerPropPrefix: 'on',
+      eventHandlerPropPrefix: 'on',
     }],
     'react/jsx-indent-props': [ENABLE, INDENT_LENGTH_JSX],
     'react/jsx-indent': [ENABLE, INDENT_LENGTH_JSX],
@@ -356,7 +356,7 @@ module.exports = {
     'keyword-spacing': [ENABLE, {
       'before': true,
       'after': true,
-    }]
+    }],
     'linebreak-style': [ENABLE, 'unix'],
     'lines-around-comment': [ENABLE, {
       beforeBlockComment: true,
@@ -381,14 +381,14 @@ module.exports = {
     }],
     'max-nested-callbacks': [ENABLE, MAX_NESTED_CALLBACKS],
     'max-params': [ENABLE, MAX_FUNCTION_PARAMETERS],
-    'max-statements': [ENABLE, MAX_STATEMENTS {
+    'max-statements': [ENABLE, MAX_STATEMENTS, {
       ignoreTopLevelFunctions: false,
     }],
     'new-parens': ENABLE,
     'newline-after-var': [ENABLE, 'always'],
     'newline-per-chained-call': [ENABLE, {
       ignoreChainWithDepth: 2,
-    }]
+    }],
     'no-array-constructor': ENABLE,
     'no-bitwise': [ENABLE, {
       int32Hint: false,
@@ -422,7 +422,7 @@ module.exports = {
     }],
     'no-whitespace-before-property': ENABLE,
     'one-var': [ENABLE, 'never'],
-    'one-var-declaration-per-line': [ENABLE, 'initializations']
+    'one-var-declaration-per-line': [ENABLE, 'initializations'],
     'operator-assignment': [ENABLE, 'always'],
     'operator-linebreak': [ENABLE, 'after'],
     'padded-blocks': [ENABLE, 'never'],
@@ -438,7 +438,7 @@ module.exports = {
       ignoreCase: false,
       ignoreMemberSort: false,
       memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-    }]
+    }],
     'sort-vars': [ENABLE, {
       ignoreCase: false,
     }],
