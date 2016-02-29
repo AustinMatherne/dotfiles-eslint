@@ -369,8 +369,9 @@ module.exports = {
     'no-lonely-if': ENABLE,
     'no-mixed-spaces-and-tabs': ENABLE,
     'no-multiple-empty-lines': [ENABLE, {
-      max: ENABLE,
-      maxEOF: ENABLE,
+      max: 1,
+      maxEOF: 1,
+      maxBOF: 0,
     }],
     'no-negated-condition': ENABLE,
     'no-nested-ternary': ENABLE,
