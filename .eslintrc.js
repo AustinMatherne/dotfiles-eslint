@@ -353,9 +353,14 @@ module.exports = {
       allowArrayEnd: true,
     }],
     'max-depth': [ENABLE, MAX_BLOCK_DEPTH],
-    'max-len': [ENABLE, MAX_LINE_LENGTH, ENABLE, {
+    'max-len': [ENABLE, {
+      code: MAX_LINE_LENGTH,
+      comments: MAX_LINE_LENGTH,
+      tabWidth: INDENT_LENGTH,
       ignoreComments: false,
+      ignoreTrailingComments: false,
       ignoreUrls: false,
+      ignorePattern: null,
     }],
     'max-nested-callbacks': [ENABLE, MAX_NESTED_CALLBACKS],
     'max-params': [ENABLE, MAX_FUNCTION_PARAMETERS],
