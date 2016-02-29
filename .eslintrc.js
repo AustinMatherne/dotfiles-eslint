@@ -1,4 +1,3 @@
-const ALWAYS = 'always'
 const DISABLE = 0
 const ENABLE = 2
 const INDENT_LENGTH = 2
@@ -9,7 +8,6 @@ const MAX_FUNCTION_PARAMETERS = 3
 const MAX_LINE_LENGTH = 80
 const MAX_NESTED_CALLBACKS = 2
 const MAX_STATEMENTS = 10
-const NEVER = 'never'
 
 module.exports = {
   env: {
@@ -64,26 +62,26 @@ module.exports = {
       capIsNew: true,
     }],
     'object-curly-spacing': DISABLE,
-    'babel/object-curly-spacing': [ENABLE, NEVER, {
+    'babel/object-curly-spacing': [ENABLE, 'never', {
       objectsInObjects: false,
       arraysInObjects: false,
     }],
     'object-shorthand': DISABLE,
-    'babel/object-shorthand': [ENABLE, ALWAYS],
+    'babel/object-shorthand': [ENABLE, 'always'],
     'arrow-parens': DISABLE,
-    'babel/arrow-parens': [ENABLE, ALWAYS],
+    'babel/arrow-parens': [ENABLE, 'always'],
     'babel/no-await-in-loop': ENABLE,
     'react/display-name': ENABLE,
     'react/forbid-prop-types': ENABLE,
-    'react/jsx-boolean-value': [ENABLE, ALWAYS],
+    'react/jsx-boolean-value': [ENABLE, 'always'],
     'react/jsx-closing-bracket-location': [ENABLE, {
       nonEmpty: 'line-aligned',
       selfClosing: 'line-aligned',
     }],
-    'react/jsx-curly-spacing': [ENABLE, ALWAYS, {
+    'react/jsx-curly-spacing': [ENABLE, 'always', {
       allowMultiline: true,
     }],
-    'react/jsx-equals-spacing': [ENABLE, NEVER],
+    'react/jsx-equals-spacing': [ENABLE, 'never'],
     'react/jsx-handler-names': [ENABLE, {
       eventHandlerPrefix: 'handle',
       eentHandlerPropPrefix: 'on',
@@ -127,7 +125,7 @@ module.exports = {
     'react/no-set-state': ENABLE,
     'react/no-string-refs': ENABLE,
     'react/no-unknown-property': ENABLE,
-    'react/prefer-es6-class': [ENABLE, ALWAYS],
+    'react/prefer-es6-class': [ENABLE, 'always'],
     'react/prop-types': ENABLE,
     'react/react-in-jsx-scope': ENABLE,
     'react/require-extension': ENABLE,
@@ -138,7 +136,7 @@ module.exports = {
       assignment: true,
       return: true,
     }],
-    'comma-dangle': [ENABLE, 'always-multiline'],
+    'comma-dangle': [ENABLE, ''always'-multiline'],
     'no-cond-assign': [ENABLE, 'except-parens'],
     'no-console': ENABLE,
     'no-constant-condition': ENABLE,
@@ -177,6 +175,7 @@ module.exports = {
     'accessor-pairs': [ENABLE, {
       getWithoutSet: true,
     }],
+    'array-callback-return': ENABLE,
     'block-scoped-var': ENABLE,
     'complexity': [ENABLE, MAX_COMPLEXITY],
     'consistent-return': ENABLE,
@@ -193,11 +192,15 @@ module.exports = {
     'no-case-declarations': ENABLE,
     'no-div-regex': ENABLE,
     'no-else-return': ENABLE,
+    'no-empty-function': [ENABLE, {
+      allow: [],
+    }],
     'no-empty-pattern': ENABLE,
     'no-eq-null': ENABLE,
     'no-eval': ENABLE,
     'no-extend-native': ENABLE,
     'no-extra-bind': ENABLE,
+    'no-extra-label': ENABLE,
     'no-fallthrough': ENABLE,
     'no-floating-decimal': ENABLE,
     'no-implicit-coercion': [ENABLE, {
@@ -205,6 +208,7 @@ module.exports = {
       number: true,
       string: true,
     }],
+    'no-implicit-globals': ENABLE,
     'no-implied-eval': ENABLE,
     'no-invalid-this': ENABLE,
     'no-iterator': ENABLE,
@@ -238,12 +242,13 @@ module.exports = {
     'no-redeclare': [ENABLE, {
       builtinGlobals: true,
     }],
-    'no-return-assign': [ENABLE, ALWAYS],
+    'no-return-assign': [ENABLE, 'always'],
     'no-script-url': ENABLE,
     'no-self-assign': ENABLE,
     'no-self-compare': ENABLE,
     'no-sequences': ENABLE,
     'no-throw-literal': ENABLE,
+    'no-unmodified-loop-condition': ENABLE,
     'no-unused-expressions': [ENABLE, {
       allowShortCircuit: false,
       allowTernary: false,
@@ -260,11 +265,11 @@ module.exports = {
     'radix': ENABLE,
     'vars-on-top': ENABLE,
     'wrap-iife': [ENABLE, 'inside'],
-    'yoda': [ENABLE, NEVER, {
+    'yoda': [ENABLE, 'never', {
       exceptRange: true,
     }],
     'strict': [ENABLE, 'global'],
-    'init-declarations': [ENABLE, ALWAYS],
+    'init-declarations': [ENABLE, 'always'],
     'no-catch-shadow': DISABLE,
     'no-delete-var': ENABLE,
     'no-label-var': ENABLE,
@@ -293,35 +298,37 @@ module.exports = {
     'no-new-require': ENABLE,
     'no-path-concat': ENABLE,
     'no-process-exit': ENABLE,
+    'no-restricted-imports': DISABLE,
     'no-restricted-modules': DISABLE,
     'no-sync': ENABLE,
-    'array-bracket-spacing': [ENABLE, NEVER, {
+    'array-bracket-spacing': [ENABLE, 'never', {
       singleValue: false,
       objectsInArrays: false,
       arraysInArrays: false,
     }],
-    'block-spacing': [ENABLE, NEVER],
+    'block-spacing': [ENABLE, 'never'],
     'brace-style': [ENABLE, '1tbs', {
       allowSingleLine: false,
     }],
     'camelcase': [ENABLE, {
-      properties: ALWAYS,
+      properties: 'always',
     }],
     'comma-spacing': [ENABLE, {
       before: false,
       after: true,
     }],
     'comma-style': [ENABLE, 'last'],
-    'computed-property-spacing': [ENABLE, NEVER],
+    'computed-property-spacing': [ENABLE, 'never'],
     'consistent-this': [ENABLE, 'self'],
     'eol-last': [ENABLE, 'unix'],
     'func-names': ENABLE,
     'func-style': [ENABLE, 'declaration', {
       allowArrowFunctions: true,
     }],
+    'id-blacklist': DISABLE,
     'id-length': [ENABLE, {
       min: ENABLE,
-      properties: ALWAYS,
+      properties: 'always',
       exceptions: ['_'],
     }],
     'id-match': DISABLE,
@@ -371,7 +378,10 @@ module.exports = {
     'max-params': [ENABLE, MAX_FUNCTION_PARAMETERS],
     'max-statements': [ENABLE, MAX_STATEMENTS],
     'new-parens': ENABLE,
-    'newline-after-var': [ENABLE, ALWAYS],
+    'newline-after-var': [ENABLE, 'always'],
+    'newline-per-chained-call': [ENABLE, {
+      ignoreChainWithDepth: 2,
+    }]
     'no-array-constructor': ENABLE,
     'no-bitwise': [ENABLE, {
       allow: [],
@@ -402,27 +412,34 @@ module.exports = {
     'no-unneeded-ternary': [ENABLE, {
       defaultAssignment: false,
     }],
-    'one-var': [ENABLE, NEVER],
-    'operator-assignment': [ENABLE, ALWAYS],
+    'no-whitespace-before-property': ENABLE,
+    'one-var': [ENABLE, 'never'],
+    'one-var-declaration-per-line': [ENABLE, 'initializations']
+    'operator-assignment': [ENABLE, 'always'],
     'operator-linebreak': [ENABLE, 'after'],
-    'padded-blocks': [ENABLE, NEVER],
+    'padded-blocks': [ENABLE, 'never'],
     'quote-props': [ENABLE, 'consistent-as-needed'],
     'quotes': [ENABLE, 'single'],
     'require-jsdoc': ENABLE,
+    'semi': [ENABLE, 'never'],
     'semi-spacing': [ENABLE, {
       before: false,
       after: true,
     }],
-    'semi': [ENABLE, NEVER],
+    'sort-imports': [ENABLE, {
+      ignoreCase: false,
+      ignoreMemberSort: false,
+      memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+    }]
     'sort-vars': [ENABLE, {
       ignoreCase: false,
     }],
     'space-before-blocks': [ENABLE, {
-      functions: ALWAYS,
-      keywords: ALWAYS,
+      functions: 'always',
+      keywords: 'always',
     }],
-    'space-before-function-paren': [ENABLE, NEVER],
-    'space-in-parens': [ENABLE, NEVER, {
+    'space-before-function-paren': [ENABLE, 'never'],
+    'space-in-parens': [ENABLE, 'never', {
       exceptions: [],
     }],
     'space-infix-ops': [ENABLE, {
@@ -432,9 +449,9 @@ module.exports = {
       words: true,
       nonwords: false,
     }],
-    'spaced-comment': [ENABLE, ALWAYS],
+    'spaced-comment': [ENABLE, 'always'],
     'wrap-regex': ENABLE,
-    'arrow-body-style': [ENABLE, ALWAYS],
+    'arrow-body-style': [ENABLE, 'always'],
     'arrow-spacing': [ENABLE, {
       before: true,
       after: true,
@@ -446,13 +463,20 @@ module.exports = {
     'no-dupe-class-members': ENABLE,
     'no-new-symbol': ENABLE,
     'no-this-before-super': ENABLE,
+    'no-useless-constructor': ENABLE,
     'no-var': ENABLE,
     'prefer-arrow-callback': ENABLE,
     'prefer-const': ENABLE,
     'prefer-reflect': ENABLE,
+    'prefer-rest-params': ENABLE,
     'prefer-spread': ENABLE,
     'prefer-template': ENABLE,
     'require-yield': ENABLE,
+    'template-curly-spacing': [ENABLE, 'never'],
+    'yield-star-spacing': [ENABLE, {
+       before: false,
+       after: true,
+    }],
   },
   settings: {
     react: {
