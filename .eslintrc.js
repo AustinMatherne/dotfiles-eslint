@@ -51,6 +51,7 @@ module.exports = {
   },
   plugins: [
     'babel',
+    'flow-vars'
     'react',
   ],
   rules: {
@@ -71,6 +72,8 @@ module.exports = {
     'arrow-parens': DISABLE,
     'babel/arrow-parens': [ENABLE, 'always'],
     'babel/no-await-in-loop': ENABLE,
+    'flow-vars/define-flow-type': ENABLE,
+    'flow-vars/use-flow-type': ENABLE,
     'react/display-name': [ENABLE, {
       ignoreTranspilerName: true,
     }],
