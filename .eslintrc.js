@@ -136,8 +136,8 @@ module.exports = {
       assignment: true,
       return: true,
     }],
-    'comma-dangle': [ENABLE, ''always'-multiline'],
-    'no-cond-assign': [ENABLE, 'except-parens'],
+    'comma-dangle': [ENABLE, 'always-multiline'],
+    'no-cond-assign': [ENABLE, 'always'],
     'no-console': ENABLE,
     'no-constant-condition': ENABLE,
     'no-control-regex': ENABLE,
@@ -192,9 +192,7 @@ module.exports = {
     'no-case-declarations': ENABLE,
     'no-div-regex': ENABLE,
     'no-else-return': ENABLE,
-    'no-empty-function': [ENABLE, {
-      allow: [],
-    }],
+    'no-empty-function': ENABLE,
     'no-empty-pattern': ENABLE,
     'no-eq-null': ENABLE,
     'no-eval': ENABLE,
@@ -277,7 +275,6 @@ module.exports = {
     'no-shadow': [ENABLE, {
       builtinGlobals: true,
       hoist: 'all',
-      allow: [],
     }],
     'no-undef-init': ENABLE,
     'no-undef': [ENABLE, {
@@ -288,12 +285,16 @@ module.exports = {
       vars: 'all',
       args: 'after-used',
     }],
-    'no-use-before-define': [ENABLE, 'nofunc'],
+    'no-use-before-define': [ENABLE, {
+      functions: true,
+      classes: true,
+    }],
     'callback-return': [ENABLE, ['callback', 'cb', 'next']],
     'global-require': ENABLE,
     'handle-callback-err': [ENABLE, '^(err|error)$'],
     'no-mixed-requires': [ENABLE, {
       grouping: true,
+      allowCall: false,
     }],
     'no-new-require': ENABLE,
     'no-path-concat': ENABLE,
@@ -349,7 +350,6 @@ module.exports = {
     'keyword-spacing': [ENABLE, {
       'before': true,
       'after': true,
-      'overrides': {},
     }]
     'linebreak-style': [ENABLE, 'unix'],
     'lines-around-comment': [ENABLE, {
@@ -372,11 +372,12 @@ module.exports = {
       ignoreComments: false,
       ignoreTrailingComments: false,
       ignoreUrls: false,
-      ignorePattern: null,
     }],
     'max-nested-callbacks': [ENABLE, MAX_NESTED_CALLBACKS],
     'max-params': [ENABLE, MAX_FUNCTION_PARAMETERS],
-    'max-statements': [ENABLE, MAX_STATEMENTS],
+    'max-statements': [ENABLE, MAX_STATEMENTS {
+      ignoreTopLevelFunctions: false,
+    }],
     'new-parens': ENABLE,
     'newline-after-var': [ENABLE, 'always'],
     'newline-per-chained-call': [ENABLE, {
@@ -384,7 +385,6 @@ module.exports = {
     }]
     'no-array-constructor': ENABLE,
     'no-bitwise': [ENABLE, {
-      allow: [],
       int32Hint: false,
     }],
     'no-continue': ENABLE,
@@ -408,7 +408,9 @@ module.exports = {
     'no-trailing-spaces': [ENABLE, {
       skipBlankLines: false,
     }],
-    'no-underscore-dangle': DISABLE,
+    'no-underscore-dangle': [ENABLE, {
+      allowAfterThis: true,
+    }],
     'no-unneeded-ternary': [ENABLE, {
       defaultAssignment: false,
     }],
@@ -439,9 +441,7 @@ module.exports = {
       keywords: 'always',
     }],
     'space-before-function-paren': [ENABLE, 'never'],
-    'space-in-parens': [ENABLE, 'never', {
-      exceptions: [],
-    }],
+    'space-in-parens': [ENABLE, 'never'],
     'space-infix-ops': [ENABLE, {
       int32Hint: false,
     }],
