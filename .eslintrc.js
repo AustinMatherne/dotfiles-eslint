@@ -36,6 +36,7 @@ module.exports = {
     webextensions: true,
     es6: true,
   },
+  extends: 'eslint:recommended',
   parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 6,
