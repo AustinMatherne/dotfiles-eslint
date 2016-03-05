@@ -275,6 +275,7 @@ module.exports = {
     'no-catch-shadow': 'off',
     'no-delete-var': 'error',
     'no-label-var': 'error',
+    'no-restricted-globals': 'off',
     'no-shadow-restricted-names': 'error',
     'no-shadow': ['error', {
       builtinGlobals: true,
@@ -384,6 +385,7 @@ module.exports = {
     }],
     'new-parens': 'error',
     'newline-after-var': ['error', 'always'],
+    'newline-before-return': 'error',
     'newline-per-chained-call': ['error', {
       ignoreChainWithDepth: 2,
     }],
