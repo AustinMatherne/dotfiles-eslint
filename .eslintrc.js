@@ -333,7 +333,7 @@ module.exports = {
     }],
     'id-blacklist': 'off',
     'id-length': ['error', {
-      min: 'error',
+      min: 2,
       properties: 'always',
       exceptions: ['_'],
     }],
