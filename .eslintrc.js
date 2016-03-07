@@ -87,6 +87,7 @@ module.exports = {
     'react/no-string-refs': 'error',
     'react/no-unknown-property': 'error',
     'react/prefer-es6-class': ['error', 'always'],
+    'react/prefer-stateless-function': 'error',
     'react/prop-types': 'error',
     'react/react-in-jsx-scope': 'error',
     'react/require-extension': 'error',
