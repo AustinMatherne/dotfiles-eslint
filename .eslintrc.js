@@ -6,6 +6,7 @@ const MAX_FUNCTION_PARAMETERS = 3
 const MAX_LINE_LENGTH = 80
 const MAX_NESTED_CALLBACKS = 2
 const MAX_STATEMENTS = 10
+const MAX_STATEMENTS_PER_LINE = 1
 
 module.exports = {
   env: {
@@ -216,8 +217,8 @@ module.exports = {
     'no-invalid-this': 'error',
     'no-iterator': 'error',
     'no-labels': ['error', {
-      'allowLoop': false,
-      'allowSwitch': false,
+      allowLoop: false,
+      allowSwitch: false,
     }],
     'no-lone-blocks': 'error',
     'no-loop-func': 'error',
@@ -259,6 +260,7 @@ module.exports = {
     'no-unused-labels': 'error',
     'no-useless-call': 'error',
     'no-useless-concat': 'error',
+    'no-useless-escape': 'error',
     'no-void': 'error',
     'no-warning-comments': ['error', {
       terms: ['todo', 'fixme', 'any other term'],
@@ -290,6 +292,7 @@ module.exports = {
     'no-unused-vars': ['error', {
       vars: 'all',
       args: 'after-used',
+      caughtErrors: 'all',
     }],
     'no-use-before-define': ['error', {
       functions: true,
@@ -354,8 +357,8 @@ module.exports = {
       mode: 'strict',
     }],
     'keyword-spacing': ['error', {
-      'before': true,
-      'after': true,
+      before: true,
+      after: true,
     }],
     'linebreak-style': ['error', 'unix'],
     'lines-around-comment': ['error', {
@@ -383,6 +386,9 @@ module.exports = {
     'max-params': ['error', MAX_FUNCTION_PARAMETERS],
     'max-statements': ['error', MAX_STATEMENTS, {
       ignoreTopLevelFunctions: false,
+    }],
+    'max-statements-per-line': ['error', {
+      max: MAX_STATEMENTS_PER_LINE,
     }],
     'new-parens': 'error',
     'newline-after-var': ['error', 'always'],
@@ -466,10 +472,13 @@ module.exports = {
     'constructor-super': 'error',
     'no-class-assign': 'error',
     'no-confusing-arrow': ['error', {
-      'allowParens': false
+      allowParens: false,
     }],
     'no-const-assign': 'error',
     'no-dupe-class-members': 'error',
+    'no-duplicate-imports': ['error', {
+      includeExports: true,
+    }],
     'no-new-symbol': 'error',
     'no-this-before-super': 'error',
     'no-useless-constructor': 'error',
@@ -483,8 +492,8 @@ module.exports = {
     'require-yield': 'error',
     'template-curly-spacing': ['error', 'never'],
     'yield-star-spacing': ['error', {
-       before: false,
-       after: true,
+      before: false,
+      after: true,
     }],
   },
   settings: {
