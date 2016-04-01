@@ -172,6 +172,11 @@ module.exports = {
       prefer: {
         return: 'returns',
       },
+      preferType: {
+        string: 'String',
+        object: 'Object',
+        test: 'Test',
+      },
       requireReturn: true,
       requireParamDescription: true,
       requireReturnDescription: true,
@@ -183,7 +188,9 @@ module.exports = {
     }],
     'array-callback-return': 'error',
     'block-scoped-var': 'error',
-    'complexity': ['error', MAX_COMPLEXITY],
+    'complexity': ['error', {
+      max: MAX_COMPLEXITY,
+    }],
     'consistent-return': 'error',
     'curly': ['error', 'all'],
     'default-case': 'error',
@@ -373,7 +380,9 @@ module.exports = {
       allowArrayStart: true,
       allowArrayEnd: true,
     }],
-    'max-depth': ['error', MAX_BLOCK_DEPTH],
+    'max-depth': ['error', {
+      max: MAX_BLOCK_DEPTH,
+    }],
     'max-len': ['error', {
       code: MAX_LINE_LENGTH,
       comments: MAX_LINE_LENGTH,
@@ -382,9 +391,15 @@ module.exports = {
       ignoreTrailingComments: false,
       ignoreUrls: false,
     }],
-    'max-nested-callbacks': ['error', MAX_NESTED_CALLBACKS],
-    'max-params': ['error', MAX_FUNCTION_PARAMETERS],
-    'max-statements': ['error', MAX_STATEMENTS, {
+    'max-nested-callbacks': ['error', {
+      max: MAX_NESTED_CALLBACKS,
+    }],
+    'max-params': ['error', {
+      max: MAX_FUNCTION_PARAMETERS,
+    }],
+    'max-statements': ['error', {
+      max: MAX_STATEMENTS,
+    }, {
       ignoreTopLevelFunctions: false,
     }],
     'max-statements-per-line': ['error', {
@@ -484,7 +499,9 @@ module.exports = {
     'no-useless-constructor': 'error',
     'no-var': 'error',
     'prefer-arrow-callback': 'error',
-    'prefer-const': 'error',
+    'prefer-const': ['error', {
+      destructuring: 'any',
+    }],
     'prefer-reflect': 'error',
     'prefer-rest-params': 'error',
     'prefer-spread': 'error',
