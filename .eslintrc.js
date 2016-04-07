@@ -92,6 +92,7 @@ module.exports = {
     'react/prop-types': 'error',
     'react/react-in-jsx-scope': 'error',
     'react/require-extension': 'error',
+    'react/require-render-return': 'error',
     'react/self-closing-comp': 'error',
     'react/sort-comp': 'error',
     'react/sort-prop-types': ['error', {
