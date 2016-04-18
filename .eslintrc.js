@@ -114,6 +114,7 @@ module.exports = {
       allowMultiline: true,
     }],
     'react/jsx-equals-spacing': ['error', 'never'],
+    'react/jsx-first-prop-new-line': ['error', 'multiline'],
     'react/jsx-handler-names': ['error', {
       eventHandlerPrefix: 'handle',
       eventHandlerPropPrefix: 'on',
@@ -521,6 +522,7 @@ module.exports = {
   settings: {
     react: {
       pragma: 'React',
+      version: '15.0',
     },
   },
 }
