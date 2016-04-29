@@ -171,6 +171,7 @@ module.exports = {
     'no-sparse-arrays': 'error',
     'no-unexpected-multiline': 'error',
     'no-unreachable': 'error',
+    'no-unsafe-finally': 'error',
     'use-isnan': 'error',
     'valid-jsdoc': ['error', {
       prefer: {
@@ -500,10 +501,12 @@ module.exports = {
     }],
     'no-new-symbol': 'error',
     'no-this-before-super': 'error',
+    'no-useless-computed-key': 'error',
     'no-useless-constructor': 'error',
     'no-var': 'error',
     'prefer-arrow-callback': ['error', {
       allowNamedFunctions: false,
+      allowUnboundThis: true,
     }],
     'prefer-const': ['error', {
       destructuring: 'any',
