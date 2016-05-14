@@ -134,8 +134,12 @@ module.exports = {
       ignoreCase: false,
     }],
     'react/jsx-no-literals': 'error',
+    'react/jsx-no-target-blank': 'error',
     'react/jsx-no-undef': 'error',
-    'react/jsx-pascal-case': 'error',
+    'react/jsx-pascal-case': ['error', {
+      allowAllCaps: false,
+      ignore: [],
+    }],
     'react/jsx-sort-props': ['error', {
       ignoreCase: false,
       callbacksLast: true,
