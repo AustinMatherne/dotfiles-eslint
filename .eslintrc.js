@@ -452,6 +452,9 @@ module.exports = {
       defaultAssignment: false,
     }],
     'no-whitespace-before-property': 'error',
+    'object-property-newline': ['error', {
+      allowMultiplePropertiesPerLine: false,
+    }]
     'one-var': ['error', 'never'],
     'one-var-declaration-per-line': ['error', 'initializations'],
     'operator-assignment': ['error', 'always'],
@@ -514,6 +517,7 @@ module.exports = {
     }],
     'prefer-const': ['error', {
       destructuring: 'any',
+      ignoreReadBeforeAssign: false,
     }],
     'prefer-reflect': 'error',
     'prefer-rest-params': 'error',
