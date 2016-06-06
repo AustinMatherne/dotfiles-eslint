@@ -151,7 +151,9 @@ module.exports = {
     'comma-dangle': ['error', 'always-multiline'],
     'no-cond-assign': ['error', 'always'],
     'no-console': 'error',
-    'no-constant-condition': 'error',
+    'no-constant-condition': ['error', {
+      checkLoops: true,
+    }],
     'no-control-regex': 'error',
     'no-debugger': 'error',
     'no-dupe-args': 'error',
@@ -171,6 +173,7 @@ module.exports = {
     'no-irregular-whitespace': 'error',
     'no-negated-in-lhs': 'error',
     'no-obj-calls': 'error',
+    'no-prototype-builtins': 'error',
     'no-regex-spaces': 'error',
     'no-sparse-arrays': 'error',
     'no-unexpected-multiline': 'error',
@@ -200,7 +203,9 @@ module.exports = {
     'complexity': ['error', {
       max: MAX_COMPLEXITY,
     }],
-    'consistent-return': 'error',
+    'consistent-return': ['error', {
+      treatUndefinedAsUnspecified: false,
+    }],
     'curly': ['error', 'all'],
     'default-case': 'error',
     'dot-location': ['error', 'object'],
@@ -454,7 +459,7 @@ module.exports = {
     'no-whitespace-before-property': 'error',
     'object-property-newline': ['error', {
       allowMultiplePropertiesPerLine: false,
-    }]
+    }],
     'one-var': ['error', 'never'],
     'one-var-declaration-per-line': ['error', 'initializations'],
     'operator-assignment': ['error', 'always'],
@@ -490,6 +495,7 @@ module.exports = {
       nonwords: false,
     }],
     'spaced-comment': ['error', 'always'],
+    'unicode-bom': ['error', 'never'],
     'wrap-regex': 'error',
     'arrow-body-style': ['error', 'always'],
     'arrow-spacing': ['error', {
@@ -510,6 +516,11 @@ module.exports = {
     'no-this-before-super': 'error',
     'no-useless-computed-key': 'error',
     'no-useless-constructor': 'error',
+    'no-useless-rename': ['error', {
+      ignoreImport: false,
+      ignoreExport: false,
+      ignoreDestructuring: false,
+    }],
     'no-var': 'error',
     'prefer-arrow-callback': ['error', {
       allowNamedFunctions: false,
@@ -533,7 +544,6 @@ module.exports = {
   settings: {
     react: {
       pragma: 'React',
-      version: '15.0',
     },
   },
 }
