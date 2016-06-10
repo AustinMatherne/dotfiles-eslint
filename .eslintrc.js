@@ -4,6 +4,7 @@ const MAX_BLOCK_DEPTH = 4
 const MAX_COMPLEXITY = 10
 const MAX_FUNCTION_PARAMETERS = 3
 const MAX_LINE_LENGTH = 80
+const MAX_LINES = 500
 const MAX_NESTED_CALLBACKS = 2
 const MAX_STATEMENTS = 10
 const MAX_STATEMENTS_PER_LINE = 1
@@ -83,7 +84,9 @@ module.exports = {
     'react/no-did-update-set-state': 'error',
     'react/no-direct-mutation-state': 'error',
     'react/no-is-mounted': 'error',
-    'react/no-multi-comp': ['error', {ignoreStateless: false}],
+    'react/no-multi-comp': ['error', {
+      ignoreStateless: false,
+    }],
     'react/no-set-state': 'error',
     'react/no-string-refs': 'error',
     'react/no-unknown-property': 'error',
@@ -405,6 +408,11 @@ module.exports = {
       ignoreTrailingComments: false,
       ignoreUrls: false,
     }],
+    'max-lines': ['error', {
+      max: MAX_LINES,
+      skipBlankLines: true,
+      skipComments: true,
+    }],
     'max-nested-callbacks': ['error', {
       max: MAX_NESTED_CALLBACKS,
     }],
@@ -432,6 +440,7 @@ module.exports = {
     'no-continue': 'error',
     'no-inline-comments': 'error',
     'no-lonely-if': 'error',
+    'no-mixed-operators': 'error',
     'no-mixed-spaces-and-tabs': 'error',
     'no-multiple-empty-lines': ['error', {
       max: 1,
@@ -457,6 +466,10 @@ module.exports = {
       defaultAssignment: false,
     }],
     'no-whitespace-before-property': 'error',
+    'object-curly-newline': ['error', {
+      ObjectExpression: 'always',
+      ObjectPattern: 'never',
+    }],
     'object-property-newline': ['error', {
       allowMultiplePropertiesPerLine: false,
     }],
@@ -535,6 +548,7 @@ module.exports = {
     'prefer-spread': 'error',
     'prefer-template': 'error',
     'require-yield': 'error',
+    'rest-spread-spacing': ['error', 'never'],
     'template-curly-spacing': ['error', 'never'],
     'yield-star-spacing': ['error', {
       before: false,
