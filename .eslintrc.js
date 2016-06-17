@@ -78,6 +78,7 @@ module.exports = {
       ignoreTranspilerName: true,
     }],
     'react/forbid-prop-types': 'error',
+    'react/no-comment-textnodes': 'error',
     'react/no-danger': 'error',
     'react/no-deprecated': 'error',
     'react/no-did-mount-set-state': 'error',
@@ -87,6 +88,7 @@ module.exports = {
     'react/no-multi-comp': ['error', {
       ignoreStateless: false,
     }],
+    'react/no-render-return-value': 'error',
     'react/no-set-state': 'error',
     'react/no-string-refs': 'error',
     'react/no-unknown-property': 'error',
@@ -95,8 +97,12 @@ module.exports = {
     'react/prop-types': 'error',
     'react/react-in-jsx-scope': 'error',
     'react/require-extension': 'error',
+    'react/require-optimization': 'error',
     'react/require-render-return': 'error',
-    'react/self-closing-comp': 'error',
+    'react/self-closing-comp': ['error', {
+      component: true,
+      html: true,
+    }],
     'react/sort-comp': 'error',
     'react/sort-prop-types': ['error', {
       callbacksLast: true,
@@ -117,11 +123,9 @@ module.exports = {
       allowMultiline: true,
     }],
     'react/jsx-equals-spacing': ['error', 'never'],
+    'react/jsx-filename-extension': 'error',
     'react/jsx-first-prop-new-line': ['error', 'multiline'],
-    'react/jsx-handler-names': ['error', {
-      eventHandlerPrefix: 'handle',
-      eventHandlerPropPrefix: 'on',
-    }],
+    'react/jsx-handler-names': 'error',
     'react/jsx-indent-props': ['error', INDENT_LENGTH_JSX],
     'react/jsx-indent': ['error', INDENT_LENGTH_JSX],
     'react/jsx-key': 'error',
