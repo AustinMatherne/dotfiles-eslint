@@ -62,6 +62,12 @@ module.exports = {
       newIsCap: true,
       capIsNew: true,
     }],
+    'array-bracket-spacing': 'off',
+    'babel/array-bracket-spacing': ['error', 'never', {
+      singleValue: false,
+      objectsInArrays: false,
+      arraysInArrays: false,
+    }],
     'object-curly-spacing': 'off',
     'babel/object-curly-spacing': ['error', 'never', {
       objectsInObjects: false,
@@ -72,6 +78,8 @@ module.exports = {
     'arrow-parens': 'off',
     'babel/arrow-parens': ['error', 'always'],
     'babel/no-await-in-loop': 'error',
+    'babel/flow-object-type': ['error', 'semicolon'],
+    'babel/func-params-comma-dangle': ['error', 'always-multiline'],
     'flow-vars/define-flow-type': 'error',
     'flow-vars/use-flow-type': 'error',
     'react/display-name': ['error', {
@@ -339,11 +347,6 @@ module.exports = {
     'no-restricted-imports': 'off',
     'no-restricted-modules': 'off',
     'no-sync': 'error',
-    'array-bracket-spacing': ['error', 'never', {
-      singleValue: false,
-      objectsInArrays: false,
-      arraysInArrays: false,
-    }],
     'block-spacing': ['error', 'never'],
     'brace-style': ['error', '1tbs', {
       allowSingleLine: false,
