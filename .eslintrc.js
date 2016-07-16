@@ -434,6 +434,7 @@ module.exports = {
     'max-statements-per-line': ['error', {
       max: MAX_STATEMENTS_PER_LINE,
     }],
+    'multiline-ternary': 'off',
     'new-parens': 'error',
     'newline-after-var': ['error', 'always'],
     'newline-before-return': 'error',
@@ -514,7 +515,11 @@ module.exports = {
       words: true,
       nonwords: false,
     }],
-    'spaced-comment': ['error', 'always'],
+    'spaced-comment': ['error', 'always', {
+      block: {
+        balanced: true,
+      },
+    }],
     'unicode-bom': ['error', 'never'],
     'wrap-regex': 'error',
     'arrow-body-style': ['error', 'always'],
