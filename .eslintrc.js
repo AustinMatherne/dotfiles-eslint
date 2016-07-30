@@ -463,12 +463,14 @@ module.exports = {
     }],
     'no-restricted-syntax': 'off',
     'no-spaced-func': 'error',
+    'no-tabs': 'error',
     'no-ternary': 'off',
     'no-trailing-spaces': ['error', {
       skipBlankLines: false,
     }],
     'no-underscore-dangle': ['error', {
       allowAfterThis: true,
+      allowAfterSuper: true,
     }],
     'no-unneeded-ternary': ['error', {
       defaultAssignment: false,
