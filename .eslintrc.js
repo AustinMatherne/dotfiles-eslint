@@ -51,7 +51,7 @@ module.exports = {
   },
   plugins: [
     'babel',
-    'flow-vars',
+    'flowtype',
     'react',
   ],
   rules: {
@@ -80,8 +80,14 @@ module.exports = {
     'babel/no-await-in-loop': 'error',
     'babel/flow-object-type': ['error', 'semicolon'],
     'babel/func-params-comma-dangle': ['error', 'always-multiline'],
-    'flow-vars/define-flow-type': 'error',
-    'flow-vars/use-flow-type': 'error',
+    'flowtype/define-flow-type': 'error',
+    'flowtype/require-parameter-type': 'error',
+    'flowtype/require-return-type': 'error',
+    'flowtype/require-valid-file-annotation': ['error', 'always'],
+    'flowtype/space-after-type-colon': ['error', 'always'],
+    'flowtype/space-before-type-colon': ['error', 'never'],
+    'flowtype/type-id-match': 'error',
+    'flowtype/use-flow-type': 'error',
     'react/display-name': ['error', {
       ignoreTranspilerName: true,
     }],
@@ -571,6 +577,9 @@ module.exports = {
     }],
   },
   settings: {
+    flowtype: {
+      onlyFilesWithFlowAnnotation: false,
+    },
     react: {
       pragma: 'React',
     },
