@@ -86,12 +86,12 @@ module.exports = {
       ignoreTranspilerName: true,
     }],
     'react/forbid-prop-types': 'error',
-    'react/no-comment-textnodes': 'error',
     'react/no-danger': 'error',
     'react/no-deprecated': 'error',
     'react/no-did-mount-set-state': 'error',
     'react/no-did-update-set-state': 'error',
     'react/no-direct-mutation-state': 'error',
+    'react/no-find-dom-node': 'error',
     'react/no-is-mounted': 'error',
     'react/no-multi-comp': ['error', {
       ignoreStateless: false,
@@ -104,7 +104,6 @@ module.exports = {
     'react/prefer-stateless-function': 'error',
     'react/prop-types': 'error',
     'react/react-in-jsx-scope': 'error',
-    'react/require-extension': 'error',
     'react/require-optimization': 'error',
     'react/require-render-return': 'error',
     'react/self-closing-comp': ['error', {
@@ -116,11 +115,6 @@ module.exports = {
       callbacksLast: true,
       ignoreCase: false,
       requiredFirst: true,
-    }],
-    'react/wrap-multilines': ['error', {
-      declaration: true,
-      assignment: true,
-      return: true,
     }],
     'react/jsx-boolean-value': ['error', 'always'],
     'react/jsx-closing-bracket-location': ['error', {
@@ -134,8 +128,8 @@ module.exports = {
     'react/jsx-filename-extension': 'error',
     'react/jsx-first-prop-new-line': ['error', 'multiline'],
     'react/jsx-handler-names': 'error',
-    'react/jsx-indent-props': ['error', INDENT_LENGTH_JSX],
     'react/jsx-indent': ['error', INDENT_LENGTH_JSX],
+    'react/jsx-indent-props': ['error', INDENT_LENGTH_JSX],
     'react/jsx-key': 'error',
     'react/jsx-max-props-per-line': ['error', {
       maximum: 1,
@@ -145,6 +139,7 @@ module.exports = {
       allowArrowFunctions: false,
       allowBind: false,
     }],
+    'react/jsx-no-comment-textnodes': 'error',
     'react/jsx-no-duplicate-props': ['error', {
       ignoreCase: false,
     }],
@@ -159,10 +154,16 @@ module.exports = {
       ignoreCase: false,
       callbacksLast: true,
       shorthandFirst: true,
+      shorthandLast: false,
     }],
     'react/jsx-space-before-closing': ['error', 'never'],
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
+    'react/jsx-wrap-multilines': ['error', {
+      declaration: true,
+      assignment: true,
+      return: true,
+    }],
     'comma-dangle': ['error', 'always-multiline'],
     'no-cond-assign': ['error', 'always'],
     'no-console': 'error',
