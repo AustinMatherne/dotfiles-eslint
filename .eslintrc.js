@@ -37,7 +37,12 @@ module.exports = {
     'webextensions': true,
     'greasemonkey': true,
   },
-  extends: ['eslint:recommended', 'plugin:react/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:react/recommended',
+  ],
   parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 7,
@@ -52,6 +57,7 @@ module.exports = {
   plugins: [
     'babel',
     'flowtype',
+    'import',
     'react',
   ],
   rules: {
@@ -88,6 +94,47 @@ module.exports = {
     'flowtype/space-before-type-colon': ['error', 'never'],
     'flowtype/type-id-match': 'error',
     'flowtype/use-flow-type': 'error',
+    'import/no-unresolved': ['error', {
+      commonjs: true,
+      amd: true,
+    }],
+    'import/named': 'error',
+    'import/default': 'error',
+    'import/namespace': ['error', {
+      allowComputed: false,
+    }],
+    'import/no-restricted-paths': 'off',
+    'import/export': 'error',
+    'import/no-named-as-default': 'error',
+    'import/no-named-as-default-member': 'error',
+    'import/no-deprecated': 'error',
+    'import/no-extraneous-dependencies': ['error', {
+      devDependencies: true,
+      optionalDependencies: true,
+      peerDependencies: true,
+    }],
+    'import/no-mutable-exports': 'error',
+    'import/no-commonjs': 'off',
+    'import/no-amd': 'error',
+    'import/no-nodejs-modules': 'off',
+    'import/imports-first': 'error',
+    'import/no-duplicates': 'error',
+    'import/no-namespace': 'error',
+    'import/extensions': ['error', 'never'],
+    'import/order': ['error', {
+      'groups': [
+        'builtin',
+        'external',
+        'internal',
+        'parent',
+        'sibling',
+        'index',
+      ],
+      'newlines-between': 'never',
+    }],
+    'import/newline-after-import': 'error',
+    'import/prefer-default-export': 'error',
+
     'react/display-name': ['error', {
       ignoreTranspilerName: true,
     }],
