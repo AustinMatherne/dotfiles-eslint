@@ -94,6 +94,7 @@ module.exports = {
     'flowtype/space-before-type-colon': ['error', 'never'],
     'flowtype/type-id-match': 'error',
     'flowtype/use-flow-type': 'error',
+    'flowtype/valid-syntax': 'error',
     'import/no-unresolved': ['error', {
       commonjs: true,
       amd: true,
