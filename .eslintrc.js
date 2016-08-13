@@ -241,14 +241,15 @@ module.exports = {
     'no-inner-declarations': ['error', 'both'],
     'no-invalid-regexp': 'error',
     'no-irregular-whitespace': 'error',
-    'no-negated-in-lhs': 'error',
     'no-obj-calls': 'error',
     'no-prototype-builtins': 'error',
     'no-regex-spaces': 'error',
     'no-sparse-arrays': 'error',
+    'no-template-curly-in-string': 'error',
     'no-unexpected-multiline': 'error',
     'no-unreachable': 'error',
     'no-unsafe-finally': 'error',
+    'no-unsafe-negation': 'error',
     'use-isnan': 'error',
     'valid-jsdoc': ['error', {
       prefer: {
@@ -298,6 +299,7 @@ module.exports = {
     'no-extra-label': 'error',
     'no-fallthrough': 'error',
     'no-floating-decimal': 'error',
+    'no-global-assign': 'error',
     'no-implicit-coercion': ['error', {
       boolean: true,
       number: true,
@@ -325,7 +327,6 @@ module.exports = {
       },
     }],
     'no-multi-str': 'error',
-    'no-native-reassign': 'error',
     'no-new-func': 'error',
     'no-new-wrappers': 'error',
     'no-new': 'error',
@@ -339,7 +340,9 @@ module.exports = {
     }],
     'no-return-assign': ['error', 'always'],
     'no-script-url': 'error',
-    'no-self-assign': 'error',
+    'no-self-assign': ['error', {
+      props: true,
+    }],
     'no-self-compare': 'error',
     'no-sequences': 'error',
     'no-throw-literal': 'error',
@@ -417,6 +420,7 @@ module.exports = {
     'computed-property-spacing': ['error', 'never'],
     'consistent-this': ['error', 'self'],
     'eol-last': ['error', 'unix'],
+    'func-call-spacing': ['error', 'never'],
     'func-names': 'error',
     'func-style': ['error', 'declaration', {
       allowArrowFunctions: true,
@@ -517,7 +521,6 @@ module.exports = {
       allowForLoopAfterthoughts: false,
     }],
     'no-restricted-syntax': 'off',
-    'no-spaced-func': 'error',
     'no-tabs': 'error',
     'no-ternary': 'off',
     'no-trailing-spaces': ['error', {
@@ -555,6 +558,10 @@ module.exports = {
       ignoreCase: false,
       ignoreMemberSort: false,
       memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+    }],
+    'sort-keys': ['error', 'asc', {
+      caseSensitive: true,
+      natural: false,
     }],
     'sort-vars': ['error', {
       ignoreCase: false,
