@@ -139,8 +139,10 @@ module.exports = {
     'react/display-name': ['error', {
       ignoreTranspilerName: true,
     }],
+    'react/forbid-component-props': 'error',
     'react/forbid-prop-types': 'error',
     'react/no-danger': 'error',
+    'react/no-danger-with-children': 'error',
     'react/no-deprecated': 'error',
     'react/no-did-mount-set-state': 'error',
     'react/no-did-update-set-state': 'error',
