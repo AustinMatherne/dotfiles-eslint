@@ -45,7 +45,7 @@ module.exports = {
   ],
   parser: 'babel-eslint',
   parserOptions: {
-    ecmaVersion: 7,
+    ecmaVersion: 2016,
     sourceType: 'module',
     ecmaFeatures: {
       globalReturn: false,
@@ -270,12 +270,15 @@ module.exports = {
       requireReturnDescription: true,
       requireReturnType: true,
     }],
-    'valid-typeof': 'error',
+    'valid-typeof': ['error', {
+      requireStringLiterals: true,
+    }],
     'accessor-pairs': ['error', {
       getWithoutSet: true,
     }],
     'array-callback-return': 'error',
     'block-scoped-var': 'error',
+    'class-methods-use-this': 'error',
     'complexity': ['error', {
       max: MAX_COMPLEXITY,
     }],
@@ -498,7 +501,7 @@ module.exports = {
     'max-statements-per-line': ['error', {
       max: MAX_STATEMENTS_PER_LINE,
     }],
-    'multiline-ternary': 'off',
+    'multiline-ternary': ['error', 'never'],
     'new-parens': 'error',
     'newline-after-var': ['error', 'always'],
     'newline-before-return': 'error',
@@ -564,6 +567,7 @@ module.exports = {
       ignoreMemberSort: false,
       memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
     }],
+    'symbol-description': 'error',
     'sort-keys': ['error', 'asc', {
       caseSensitive: true,
       natural: false,
