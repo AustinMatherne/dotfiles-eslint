@@ -138,7 +138,6 @@ module.exports = {
     }],
     'import/newline-after-import': 'error',
     'import/prefer-default-export': 'error',
-
     'react/display-name': ['error', {
       ignoreTranspilerName: true,
     }],
@@ -223,7 +222,6 @@ module.exports = {
       assignment: true,
       return: true,
     }],
-    'comma-dangle': ['error', 'always-multiline'],
     'no-cond-assign': ['error', 'always'],
     'no-console': 'error',
     'no-constant-condition': ['error', {
@@ -341,7 +339,6 @@ module.exports = {
     'no-octal-escape': 'error',
     'no-octal': 'error',
     'no-param-reassign': 'error',
-    'no-process-env': 'error',
     'no-proto': 'error',
     'no-redeclare': ['error', {
       builtinGlobals: true,
@@ -409,9 +406,10 @@ module.exports = {
     }],
     'no-new-require': 'error',
     'no-path-concat': 'error',
+    'no-process-env': 'error',
     'no-process-exit': 'error',
-    'no-restricted-imports': 'off',
     'no-restricted-modules': 'off',
+    'no-restricted-properties': 'off',
     'no-sync': 'error',
     'block-spacing': ['error', 'never'],
     'brace-style': ['error', '1tbs', {
@@ -420,6 +418,7 @@ module.exports = {
     'camelcase': ['error', {
       properties: 'always',
     }],
+    'comma-dangle': ['error', 'always-multiline'],
     'comma-spacing': ['error', {
       before: false,
       after: true,
@@ -458,6 +457,10 @@ module.exports = {
       before: true,
       after: true,
     }],
+    'line-comment-position': ['error', {
+      position: 'above',
+      applyDefaultPatterns: true,
+    }],
     'linebreak-style': ['error', 'unix'],
     'lines-around-comment': ['error', {
       beforeBlockComment: true,
@@ -471,6 +474,10 @@ module.exports = {
       allowArrayStart: true,
       allowArrayEnd: true,
     }],
+    'lines-around-directive': ['error', {
+      before: 'never',
+      after: 'always',
+    }],
     'max-depth': ['error', {
       max: MAX_BLOCK_DEPTH,
     }],
@@ -481,6 +488,8 @@ module.exports = {
       ignoreComments: false,
       ignoreTrailingComments: false,
       ignoreUrls: false,
+      ignoreStrings: false,
+      ignoreTemplateLiterals: false,
     }],
     'max-lines': ['error', {
       max: MAX_LINES,
@@ -493,13 +502,13 @@ module.exports = {
     'max-params': ['error', {
       max: MAX_FUNCTION_PARAMETERS,
     }],
+    'max-statements-per-line': ['error', {
+      max: MAX_STATEMENTS_PER_LINE,
+    }],
     'max-statements': ['error', {
       max: MAX_STATEMENTS,
     }, {
       ignoreTopLevelFunctions: false,
-    }],
-    'max-statements-per-line': ['error', {
-      max: MAX_STATEMENTS_PER_LINE,
     }],
     'multiline-ternary': ['error', 'never'],
     'new-parens': 'error',
@@ -549,25 +558,19 @@ module.exports = {
     'object-property-newline': ['error', {
       allowMultiplePropertiesPerLine: false,
     }],
-    'one-var': ['error', 'never'],
     'one-var-declaration-per-line': ['error', 'initializations'],
+    'one-var': ['error', 'never'],
     'operator-assignment': ['error', 'always'],
     'operator-linebreak': ['error', 'after'],
     'padded-blocks': ['error', 'never'],
     'quote-props': ['error', 'consistent-as-needed'],
     'quotes': ['error', 'single'],
     'require-jsdoc': 'error',
-    'semi': ['error', 'never'],
     'semi-spacing': ['error', {
       before: false,
       after: true,
     }],
-    'sort-imports': ['error', {
-      ignoreCase: false,
-      ignoreMemberSort: false,
-      memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-    }],
-    'symbol-description': 'error',
+    'semi': ['error', 'never'],
     'sort-keys': ['error', 'asc', {
       caseSensitive: true,
       natural: false,
@@ -611,6 +614,7 @@ module.exports = {
       includeExports: true,
     }],
     'no-new-symbol': 'error',
+    'no-restricted-imports': 'off',
     'no-this-before-super': 'error',
     'no-useless-computed-key': 'error',
     'no-useless-constructor': 'error',
@@ -628,12 +632,19 @@ module.exports = {
       destructuring: 'any',
       ignoreReadBeforeAssign: false,
     }],
+    'prefer-numeric-literals': 'error',
     'prefer-reflect': 'error',
     'prefer-rest-params': 'error',
     'prefer-spread': 'error',
     'prefer-template': 'error',
     'require-yield': 'error',
     'rest-spread-spacing': ['error', 'never'],
+    'sort-imports': ['error', {
+      ignoreCase: false,
+      ignoreMemberSort: false,
+      memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+    }],
+    'symbol-description': 'error',
     'template-curly-spacing': ['error', 'never'],
     'yield-star-spacing': ['error', {
       before: false,
