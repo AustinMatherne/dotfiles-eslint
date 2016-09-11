@@ -170,6 +170,7 @@ module.exports = {
     'react/no-set-state': 'error',
     'react/no-string-refs': 'error',
     'react/no-unknown-property': 'error',
+    'react/no-unused-prop-types': 'error',
     'react/prefer-es6-class': ['error', 'always'],
     'react/prefer-stateless-function': 'error',
     'react/prop-types': 'error',
@@ -186,6 +187,7 @@ module.exports = {
       ignoreCase: false,
       requiredFirst: true,
     }],
+    'react/style-prop-object': 'error',
     'react/jsx-boolean-value': ['error', 'always'],
     'react/jsx-closing-bracket-location': ['error', {
       nonEmpty: 'line-aligned',
