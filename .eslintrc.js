@@ -120,6 +120,7 @@ module.exports = {
       allowComputed: false,
     }],
     'import/no-restricted-paths': 'off',
+    'import/no-absolute-path': 'error',
     'import/export': 'error',
     'import/no-named-as-default': 'error',
     'import/no-named-as-default-member': 'error',
@@ -150,6 +151,9 @@ module.exports = {
     }],
     'import/newline-after-import': 'error',
     'import/prefer-default-export': 'error',
+    'import/max-dependencies': ['error', {
+      max: 10,
+    }],
     'react/display-name': ['error', {
       ignoreTranspilerName: true,
     }],
