@@ -90,6 +90,7 @@ module.exports = {
     'flowtype/define-flow-type': 'error',
     'flowtype/delimiter-dangle': ['error', 'always-multiline'],
     'flowtype/generic-spacing': ['error', 'never'],
+    'flowtype/no-dupe-keys': 'error',
     'flowtype/no-weak-types': ['error', {
       any: true,
       Object: true,
