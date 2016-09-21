@@ -104,6 +104,12 @@ module.exports = {
     }],
     'flowtype/require-valid-file-annotation': ['error', 'always'],
     'flowtype/semi': ['error', 'never'],
+    'flowtype/sort-keys': ['error', {
+      asc: {
+        caseSensitive: true,
+        natural: true,
+      },
+    }],
     'flowtype/space-after-type-colon': ['error', 'always'],
     'flowtype/space-before-generic-bracket': ['error', 'never'],
     'flowtype/space-before-type-colon': ['error', 'never'],
