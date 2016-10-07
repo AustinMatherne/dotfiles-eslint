@@ -101,7 +101,9 @@ module.exports = {
     'flowtype/require-return-type': ['error', {
       excludeArrowFunctions: false,
     }],
-    'flowtype/require-valid-file-annotation': ['error', 'always'],
+    'flowtype/require-valid-file-annotation': ['error', 'always', {
+      annotationStyle: 'block',
+    }],
     'flowtype/semi': ['error', 'never'],
     'flowtype/sort-keys': ['error', {
       asc: {
