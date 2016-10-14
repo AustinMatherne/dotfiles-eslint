@@ -401,7 +401,9 @@ module.exports = {
     'no-with': 'error',
     'radix': 'error',
     'vars-on-top': 'error',
-    'wrap-iife': ['error', 'inside'],
+    'wrap-iife': ['error', 'inside', {
+      functionPrototypeMethods: true,
+    }],
     'yoda': ['error', 'never', {
       exceptRange: true,
     }],
@@ -461,6 +463,9 @@ module.exports = {
     'consistent-this': ['error', 'self'],
     'eol-last': ['error', 'unix'],
     'func-call-spacing': ['error', 'never'],
+    'func-name-matching': ['error', {
+      includeCommonJSModuleExports: true,
+    }],
     'func-names': 'error',
     'func-style': ['error', 'declaration', {
       allowArrowFunctions: true,
