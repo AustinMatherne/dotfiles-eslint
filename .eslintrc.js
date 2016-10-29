@@ -393,6 +393,7 @@ module.exports = {
     'no-useless-call': 'error',
     'no-useless-concat': 'error',
     'no-useless-escape': 'error',
+    'no-useless-return': 'error',
     'no-void': 'error',
     'no-warning-comments': ['error', {
       terms: ['todo', 'fixme', 'any other term'],
@@ -484,6 +485,19 @@ module.exports = {
         let: 2,
         const: 3,
       },
+      outerIIFEBody: 1,
+      MemberExpression: 1,
+      FunctionDeclaration: {
+        parameters: 'first',
+        body: 1,
+      },
+      FunctionExpression: {
+        parameters: 'first',
+        body: 1,
+      },
+      CallExpression: {
+        arguments: 'first',
+      },
     }],
     'jsx-quotes': ['error', 'prefer-double'],
     'key-spacing': ['error', {
@@ -521,13 +535,14 @@ module.exports = {
     }],
     'max-len': ['error', {
       code: MAX_LINE_LENGTH,
-      comments: MAX_LINE_LENGTH,
       tabWidth: INDENT_LENGTH,
+      comments: MAX_LINE_LENGTH,
       ignoreComments: false,
       ignoreTrailingComments: false,
       ignoreUrls: false,
       ignoreStrings: false,
       ignoreTemplateLiterals: false,
+      ignoreRegExpLiterals: false,
     }],
     'max-lines': ['error', {
       max: MAX_LINES,
@@ -590,7 +605,9 @@ module.exports = {
     }],
     'no-whitespace-before-property': 'error',
     'object-curly-newline': ['error', {
-      ObjectExpression: 'always',
+      ObjectExpression: {
+        minProperties: 1,
+      },
       ObjectPattern: 'never',
     }],
     'object-property-newline': ['error', {
@@ -671,7 +688,6 @@ module.exports = {
       ignoreReadBeforeAssign: false,
     }],
     'prefer-numeric-literals': 'error',
-    'prefer-reflect': 'error',
     'prefer-rest-params': 'error',
     'prefer-spread': 'error',
     'prefer-template': 'error',
