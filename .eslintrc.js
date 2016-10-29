@@ -46,6 +46,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2017,
     sourceType: 'module',
+    allowImportExportEverywhere: false,
     ecmaFeatures: {
       globalReturn: false,
       impliedStrict: true,
@@ -61,7 +62,10 @@ module.exports = {
   ],
   rules: {
     'generator-star-spacing': 'off',
-    'babel/generator-star-spacing': ['error', 'before'],
+    'babel/generator-star-spacing': ['error', {
+      before: true,
+      after: false,
+    }],
     'new-cap': 'off',
     'babel/new-cap': ['error', {
       newIsCap: true,
@@ -83,7 +87,7 @@ module.exports = {
     'arrow-parens': 'off',
     'babel/arrow-parens': ['error', 'always'],
     'babel/no-await-in-loop': 'error',
-    'babel/flow-object-type': ['error', 'semicolon'],
+    'babel/flow-object-type': ['error', 'comma'],
     'babel/func-params-comma-dangle': ['error', 'always-multiline'],
     'flowtype/boolean-style': ['error', 'boolean'],
     'flowtype/define-flow-type': 'error',
@@ -95,6 +99,7 @@ module.exports = {
       Object: true,
       Function: true,
     }],
+    'flowtype/object-type-delimiter': ['error', 'comma'],
     'flowtype/require-parameter-type': ['error', {
       excludeArrowFunctions: false,
     }],
@@ -117,7 +122,6 @@ module.exports = {
     'flowtype/type-id-match': 'error',
     'flowtype/union-intersection-spacing': ['error', 'always'],
     'flowtype/use-flow-type': 'error',
-    'flowtype/valid-syntax': 'error',
     'import/no-unresolved': ['error', {
       commonjs: true,
       amd: true,
