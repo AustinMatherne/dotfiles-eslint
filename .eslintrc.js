@@ -171,6 +171,7 @@ module.exports = {
       max: 10,
     }],
     'import/no-unassigned-import': 'error',
+    'import/no-named-default': 'error',
     'react/display-name': ['error', {
       ignoreTranspilerName: true,
     }],
