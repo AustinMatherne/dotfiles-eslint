@@ -382,6 +382,7 @@ module.exports = {
       builtinGlobals: true,
     }],
     'no-return-assign': ['error', 'always'],
+    'no-return-await': 'error',
     'no-script-url': 'error',
     'no-self-assign': ['error', {
       props: true,
@@ -472,7 +473,7 @@ module.exports = {
     'func-name-matching': ['error', {
       includeCommonJSModuleExports: true,
     }],
-    'func-names': 'error',
+    'func-names': ['error', 'always'],
     'func-style': ['error', 'declaration', {
       allowArrowFunctions: true,
     }],
