@@ -253,6 +253,11 @@ module.exports = {
       shorthandLast: false,
     }],
     'react/jsx-space-before-closing': ['error', 'never'],
+    'react/jsx-tag-spacing': ['error', {
+      closingSlash: 'never',
+      beforeSelfClosing: 'always',
+      afterOpening: 'never',
+    }],
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
     'react/jsx-wrap-multilines': ['error', {
