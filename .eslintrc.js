@@ -412,6 +412,7 @@ module.exports = {
     }],
     'no-with': 'error',
     'radix': 'error',
+    'require-await': 'error',
     'vars-on-top': 'error',
     'wrap-iife': ['error', 'inside', {
       functionPrototypeMethods: true,
@@ -464,6 +465,10 @@ module.exports = {
     }],
     'camelcase': ['error', {
       properties: 'always',
+    }],
+    'capitalized-comments': ['error', 'always', {
+      ignoreInlineComments: false,
+      ignoreConsecutiveComments: true,
     }],
     'comma-dangle': ['error', 'always-multiline'],
     'comma-spacing': ['error', {
