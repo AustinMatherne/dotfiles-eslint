@@ -61,39 +61,25 @@ module.exports = {
     'react',
   ],
   rules: {
-    'generator-star-spacing': 'off',
-    'babel/generator-star-spacing': ['error', {
-      before: true,
-      after: false,
-    }],
     'new-cap': 'off',
     'babel/new-cap': ['error', {
       newIsCap: true,
       capIsNew: true,
-    }],
-    'array-bracket-spacing': 'off',
-    'babel/array-bracket-spacing': ['error', 'never', {
-      singleValue: false,
-      objectsInArrays: false,
-      arraysInArrays: false,
     }],
     'object-curly-spacing': 'off',
     'babel/object-curly-spacing': ['error', 'never', {
       objectsInObjects: false,
       arraysInObjects: false,
     }],
-    'object-shorthand': 'off',
-    'babel/object-shorthand': ['error', 'always'],
-    'arrow-parens': 'off',
-    'babel/arrow-parens': ['error', 'always'],
     'babel/no-await-in-loop': 'error',
-    'babel/flow-object-type': ['error', 'comma'],
-    'babel/func-params-comma-dangle': ['error', 'always-multiline'],
+    'no-invalid-this': 'off',
+    'babel/no-invalid-this': 'error',
     'flowtype/boolean-style': ['error', 'boolean'],
     'flowtype/define-flow-type': 'error',
     'flowtype/delimiter-dangle': ['error', 'always-multiline'],
     'flowtype/generic-spacing': ['error', 'never'],
     'flowtype/no-dupe-keys': 'error',
+    'flowtype/no-primitive-constructor-types': 'error',
     'flowtype/no-weak-types': ['error', {
       any: true,
       Object: true,
@@ -108,6 +94,13 @@ module.exports = {
     }],
     'flowtype/require-valid-file-annotation': ['error', 'always', {
       annotationStyle: 'block',
+    }],
+    'flowtype/require-variable-type': ['error', {
+      excludeVariableTypes: {
+        var: false,
+        let: false,
+        const: false,
+      },
     }],
     'flowtype/semi': ['error', 'never'],
     'flowtype/sort-keys': ['error', {
@@ -356,7 +349,6 @@ module.exports = {
     }],
     'no-implicit-globals': 'error',
     'no-implied-eval': 'error',
-    'no-invalid-this': 'error',
     'no-iterator': 'error',
     'no-labels': ['error', {
       allowLoop: false,
@@ -459,6 +451,11 @@ module.exports = {
     'no-restricted-modules': 'off',
     'no-restricted-properties': 'off',
     'no-sync': 'error',
+    'array-bracket-spacing': ['error', 'never', {
+      singleValue: false,
+      objectsInArrays: false,
+      arraysInArrays: false,
+    }],
     'block-spacing': ['error', 'never'],
     'brace-style': ['error', '1tbs', {
       allowSingleLine: false,
@@ -670,11 +667,16 @@ module.exports = {
     'unicode-bom': ['error', 'never'],
     'wrap-regex': 'error',
     'arrow-body-style': ['error', 'always'],
+    'arrow-parens': ['error', 'always'],
     'arrow-spacing': ['error', {
       before: true,
       after: true,
     }],
     'constructor-super': 'error',
+    'generator-star-spacing': ['error', {
+      before: true,
+      after: false,
+    }],
     'no-class-assign': 'error',
     'no-confusing-arrow': ['error', {
       allowParens: false,
@@ -695,6 +697,7 @@ module.exports = {
       ignoreDestructuring: false,
     }],
     'no-var': 'error',
+    'object-shorthand': ['error', 'always'],
     'prefer-arrow-callback': ['error', {
       allowNamedFunctions: false,
       allowUnboundThis: true,
