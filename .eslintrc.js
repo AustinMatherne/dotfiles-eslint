@@ -170,6 +170,7 @@ module.exports = {
     }],
     'react/forbid-component-props': 'error',
     'react/forbid-prop-types': 'error',
+    'react/no-array-index-key': 'error',
     'react/no-children-prop': 'error',
     'react/no-danger': 'error',
     'react/no-danger-with-children': 'error',
@@ -192,6 +193,7 @@ module.exports = {
     'react/prefer-stateless-function': 'error',
     'react/prop-types': 'error',
     'react/react-in-jsx-scope': 'error',
+    'react/require-default-props': 'error',
     'react/require-optimization': 'error',
     'react/require-render-return': 'error',
     'react/self-closing-comp': ['error', {
