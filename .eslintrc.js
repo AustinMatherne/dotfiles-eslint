@@ -699,7 +699,11 @@ module.exports = {
       ignoreDestructuring: false,
     }],
     'no-var': 'error',
-    'object-shorthand': ['error', 'always'],
+    'object-shorthand': ['error', 'always', {
+      avoidQuotes: false,
+      ignoreConstructors: false,
+      avoidExplicitReturnArrows: true,
+    }],
     'prefer-arrow-callback': ['error', {
       allowNamedFunctions: false,
       allowUnboundThis: true,
@@ -707,6 +711,12 @@ module.exports = {
     'prefer-const': ['error', {
       destructuring: 'any',
       ignoreReadBeforeAssign: false,
+    }],
+    'prefer-destructuring': ['error', {
+      array: true,
+      object: true,
+    }, {
+      enforceForRenamedProperties: true,
     }],
     'prefer-numeric-literals': 'error',
     'prefer-rest-params': 'error',
