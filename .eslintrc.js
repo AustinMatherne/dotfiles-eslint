@@ -405,6 +405,9 @@ module.exports = {
       location: 'anywhere',
     }],
     'no-with': 'error',
+    'prefer-promise-reject-errors': ['error', {
+      allowEmptyReject: false,
+    }],
     'radix': 'error',
     'require-await': 'error',
     'vars-on-top': 'error',
@@ -594,6 +597,7 @@ module.exports = {
     'no-lonely-if': 'error',
     'no-mixed-operators': 'error',
     'no-mixed-spaces-and-tabs': 'error',
+    'no-multi-assign': 'error',
     'no-multiple-empty-lines': ['error', {
       max: 1,
       maxEOF: 1,
