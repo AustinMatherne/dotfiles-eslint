@@ -436,11 +436,13 @@ module.exports = {
     'no-unused-vars': ['error', {
       vars: 'all',
       args: 'after-used',
+      ignoreRestSublings: false,
       caughtErrors: 'all',
     }],
     'no-use-before-define': ['error', {
       functions: true,
       classes: true,
+      variables: true,
     }],
     'callback-return': ['error', ['callback', 'cb', 'next']],
     'global-require': 'error',
@@ -670,6 +672,7 @@ module.exports = {
         balanced: true,
       },
     }],
+    'template-tag-spacing': ['error', 'never'],
     'unicode-bom': ['error', 'never'],
     'wrap-regex': 'error',
     'arrow-body-style': ['error', 'always'],
