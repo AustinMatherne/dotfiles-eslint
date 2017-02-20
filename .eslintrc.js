@@ -169,7 +169,9 @@ module.exports = {
       ignoreTranspilerName: true,
     }],
     'react/forbid-component-props': 'error',
+    'react/forbid-elements': 'off',
     'react/forbid-prop-types': 'error',
+    'react/forbid-foreign-prop-types': 'error',
     'react/no-array-index-key': 'error',
     'react/no-children-prop': 'error',
     'react/no-danger': 'error',
@@ -207,6 +209,7 @@ module.exports = {
       requiredFirst: true,
     }],
     'react/style-prop-object': 'error',
+    'react/void-dom-elements-no-children': 'error',
     'react/jsx-boolean-value': ['error', 'always'],
     'react/jsx-closing-bracket-location': ['error', {
       nonEmpty: 'line-aligned',
@@ -224,6 +227,7 @@ module.exports = {
     'react/jsx-key': 'error',
     'react/jsx-max-props-per-line': ['error', {
       maximum: 1,
+      when: 'always',
     }],
     'react/jsx-no-bind': ['error', {
       ignoreRefs: false,
@@ -246,6 +250,7 @@ module.exports = {
       callbacksLast: true,
       shorthandFirst: true,
       shorthandLast: false,
+      noSortAlphabetically: false,
     }],
     'react/jsx-space-before-closing': ['error', 'never'],
     'react/jsx-tag-spacing': ['error', {
