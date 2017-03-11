@@ -265,6 +265,7 @@ module.exports = {
       assignment: true,
       return: true,
     }],
+    'no-compare-neg-zero': 'error',
     'no-cond-assign': ['error', 'always'],
     'no-console': 'error',
     'no-constant-condition': ['error', {
@@ -536,7 +537,6 @@ module.exports = {
     }],
     'line-comment-position': ['error', {
       position: 'above',
-      applyDefaultPatterns: true,
     }],
     'linebreak-style': ['error', 'unix'],
     'lines-around-comment': ['error', {
@@ -630,6 +630,7 @@ module.exports = {
       defaultAssignment: false,
     }],
     'no-whitespace-before-property': 'error',
+    'nonblock-statement-body-position': ['error', 'beside'],
     'object-curly-newline': ['error', {
       ObjectExpression: {
         minProperties: 1,
