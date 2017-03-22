@@ -752,7 +752,7 @@ module.exports = {
   },
   settings: {
     flowtype: {
-      onlyFilesWithFlowAnnotation: false,
+      onlyFilesWithFlowAnnotation: true,
     },
     react: {
       pragma: 'React',
